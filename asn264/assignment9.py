@@ -1,13 +1,14 @@
 '''
 Author: Aditi Nair
 Date: November 12 2015
-Resources: http://stackoverflow.com/questions/6986986/bin-size-in-matplotlib-histogram
+Resources: 
+- http://stackoverflow.com/questions/6986986/bin-size-in-matplotlib-histogram
+- http://stackoverflow.com/questions/28931224/adding-value-labels-on-a-matplotlib-bar-chart
+- http://stackoverflow.com/questions/16090241/pandas-dataframe-as-input-for-matplotlib-pyplot-boxplot
 
 TO DO:
-- Write Test Cases
-- Fix histogram in inc_by_year
-- Do histogram in class
-- Do boxplot in class
+- Format the second histaogram function more nicely
+- Write Test cases
 '''
 
 from regionalGDP import *
@@ -19,7 +20,17 @@ def main():
 	#Until the user enters 'finish', asks for a year and displays a histogram using inc_by_year.
 	get_display()
 
-	#The use the class from problem 6 to generate graphs for the years 2007-2012
+	#Then use the regionalGDP class to generate graphs for the years 2007-2012
+	for year in range(2007,2013):
+		try:
+			print "Generating graphs for the year", str(year), "..."
+			yearly_data = regionalGDP(year)
+			yearly_data.plot_hist()
+			yearly_data.plot_boxplot()
+		
+		#Just in case some of the years are not in the income df. 
+		except InvalidDistributionRequest:
+			pass
 
 
 def prompt():

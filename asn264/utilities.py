@@ -15,19 +15,18 @@ countries = pd.read_csv('../countries.csv')
 
 income = pd.read_excel('../indicator gapminder gdp_per_capita_ppp.xlsx')
 
-#Years are column names. Transpose the dataset to have years as the rows
+#Years are column names. Transpose the dataset to have years as the rows.
 income = income.transpose()
 
-#Make the countries the column names
-income.columns = income.ix[0]
+#Make the countries the column names using loc for clarity .
+income.columns = income.loc['gdp pc test']
 
-#Remove the row with the country names and reindex. This means income.ix[0] no longer exists. 
-income = income.ix[1:]
+#Remove the row with the country names and reindex. This means income.iloc[0] no longer exists. 
+income = income.iloc[1:]
 
 #print "Income DataFrame looks like:/n", income.head()
 
 #THIS LOOKS GOOD FOR YEAR = 1808, BUT BAD FOR YEAR = 1900
-#Need to encapsulate this in a try/except
 def inc_by_year(year):
 	'''Graphically display the distribution of income per person across all countries in the world for a the given year using a bar graph.'''
 	
@@ -35,9 +34,12 @@ def inc_by_year(year):
 		#Get the GDP values for year. Throw out NaN values and sort by value. 
 		gdp_dist = income.ix[year].dropna().order()	
 
+		#Want 20 ticks for clarity but not too cluttered. 
+		bin_size = (max(gdp_dist)-min(gdp_dist))/25
+
 		#Plot a histogram of the series and format it nicely. 
-		hist = gdp_dist.plot(kind = 'hist', bins=np.arange(min(gdp_dist), max(gdp_dist) + 100, 100), color='#483D8B', figsize = (18,6))
-		plt.xticks(np.arange(min(gdp_dist), max(gdp_dist), 100))
+		hist = gdp_dist.plot(kind = 'hist', bins=np.arange(min(gdp_dist), max(gdp_dist) + bin_size, bin_size), color='#483D8B', figsize = (25,6), align = 'left')
+		plt.xticks(np.arange(min(gdp_dist), max(gdp_dist), bin_size))
 		plt.axis('tight')
 		plt.title('GDP Distribution in ' + str(year))
 		plt.xlabel('GDP per Person')
@@ -65,3 +67,5 @@ def merge_by_year(year):
 	#Occurs if 'year' is not a row in income df. 
 	except KeyError:
 		return None
+
+

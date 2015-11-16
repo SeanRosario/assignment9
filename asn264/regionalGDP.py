@@ -10,35 +10,48 @@ It also contains a custom exception pertaining to the class.
 
 from utilities import *
 
-class InvalidDistributionRequestion(Exception):
+class InvalidDistributionRequest(Exception):
 	def __str__(self):
 		return "Invalid Distribution Request."
 
-class RegionalGDP(object):
-	'''Each instance of this class is associated with a merged dataframe for the given year, controlling for the given region.'''
-	def __init__(self, reg, year):
+class regionalGDP(object):
+	'''Each instance of this class is associated with a merged dataframe for the given year, grouped by region.'''
+
+	def __init__(self, year):
 
 		tempdf = merge_by_year(year)
 
 		#tempdf will be None if 'year' is not a row in income df
 		if tempdf is not None:
 
-			tempdf = tempdf.loc[tempdf['Region']==reg.upper()]
+			#Drop the Country column and all rows without a Region value
+			self.df = tempdf.drop('Country', axis=1)
+			self.df = self.df[self.df['Region'].notnull()]
 
-			#tempdf will be empty if 'reg' is not in the 'Region' column of countries
-			if tempdf.empty:
-				raise InvalidDistributionRequest
-			else:
-				self.df = tempdf
+			#Pandas loads column as type 'Object', want type float
+			self.df['Income']=self.df['Income'].astype(float)
+
+			self.year = year
 
 		else:
 			raise InvalidDistributionRequest
 	
 	def plot_hist(self):
-		#Copy this over when you have the other histogram figured out
-		#Save the graph to individual files
-		pass
+
+		'''Plot histograms of the series and format nicely.'''
+
+		self.df['Income'].hist(by=self.df['Region'])
+		plt.savefig("Income_by_Region_" + str(self.year) + "_Histogram.pdf")
+		
+
 
 	def plot_boxplot(self):
-		#Save the graph to individual files
-		pass
+			
+		'''Create boxplots of the series and format nicely.'''
+
+		plt.figure()
+		self.df.boxplot(column='Income', by='Region', figsize=(10,5))
+		plt.title("Income per Person by Region " + str(self.year))
+		plt.ylabel("Income")
+		plt.savefig("Income_by_Region_" + str(self.year) + "_Boxplot.pdf")
+
