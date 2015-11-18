@@ -9,7 +9,7 @@ import visualize_tool as vs
 # Author: Sida Ye
 # test file
 
-"""tests for hw8"""
+"""tests for hw9"""
 
 class hw9_unittest(unittest.TestCase):
 
