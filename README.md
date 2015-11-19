@@ -5,5 +5,5 @@ DS-GA-1007 Assignment 9
 
 2. You will have three input option. First is to enter a year between 1800 and 2012. It will return a histogram about income by year. Second is to enter 'finish'. It will generate boxplots and histograms from 2007-2012. Thrid, user can enter 'quit' tp exit this program.
 
-3. use command "python test_HW8.py to run the test"
+3. use command "python hw9_test.py to run the test"
 
