@@ -36,7 +36,7 @@ def plot_income_by_yr(yr):
         result = data[yr]
         plt.figure()
         plt.hist(result.dropna(), bins=20)
-        plt.title('Distribution of income per perspm in {}'.format(yr))
+        plt.title('Distribution of income per person in {}'.format(yr))
         plt.show()
     else:
         raise KeyError('Invalid Year!')
