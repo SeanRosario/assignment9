@@ -11,8 +11,9 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt 
 
-countries = pd.read_csv('../countries.csv')
+print "Loading data..."
 
+countries = pd.read_csv('../countries.csv')
 income = pd.read_excel('../indicator gapminder gdp_per_capita_ppp.xlsx')
 
 #Years are column names. Transpose the dataset to have years as the rows.
@@ -24,9 +25,9 @@ income.columns = income.loc['gdp pc test']
 #Remove the row with the country names and reindex. This means income.iloc[0] no longer exists. 
 income = income.iloc[1:]
 
-#print "Income DataFrame looks like:/n", income.head()
+print "Income DataFrame looks like:/n", income.head()
 
-#THIS LOOKS GOOD FOR YEAR = 1808, BUT BAD FOR YEAR = 1900
+
 def inc_by_year(year):
 	'''Graphically display the distribution of income per person across all countries in the world for a the given year using a bar graph.'''
 	
@@ -67,5 +68,6 @@ def merge_by_year(year):
 	#Occurs if 'year' is not a row in income df. 
 	except KeyError:
 		return None
+
 
 

@@ -39,8 +39,8 @@ class regionalGDP(object):
 	def plot_hist(self):
 
 		'''Plot histograms of the series and format nicely.'''
-
-		self.df['Income'].hist(by=self.df['Region'])
+		self.df['Income'].hist(by=self.df['Region'], xlabelsize=6, xrot = True, ylabelsize=8, bins=15)
+		plt.suptitle('GDP Distribution in ' + str(self.year), fontsize=16)
 		plt.savefig("Income_by_Region_" + str(self.year) + "_Histogram.pdf")
 		
 

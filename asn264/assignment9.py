@@ -7,8 +7,9 @@ Resources:
 - http://stackoverflow.com/questions/16090241/pandas-dataframe-as-input-for-matplotlib-pyplot-boxplot
 
 TO DO:
-- Format the second histaogram function more nicely
+- Format the second histaogram function more nicely: add title and work out font-sizing and layout
 - Write Test cases
+- results.txt
 '''
 
 from regionalGDP import *
@@ -52,7 +53,10 @@ def get_display():
 	else:
 		#inc_by_year prints "Invalid input." if input is not in the year column of the income df. 
 		#Otherwise, displays a histogram. 
-		inc_by_year(input)
+		if input.isdigit():
+			inc_by_year(int(input))
+		else:
+			print "Invalid input."
 		return get_display()
 
 
