@@ -7,25 +7,31 @@ Resources:
 - http://stackoverflow.com/questions/16090241/pandas-dataframe-as-input-for-matplotlib-pyplot-boxplot
 
 TO DO:
-- Format the second histaogram function more nicely: add title and work out font-sizing and layout
 - Write Test cases
 - results.txt
 '''
-
+from utilities import *
 from regionalGDP import *
 import sys
 
 
 def main():
 
+	print "Loading data..."
+
+	#Perform all necessary data processing and load into dataframes. Print as required.
+	tCountries, tIncome = load_session()
+
+	print "Income DataFrame looks like:\n", tIncome.head(5)
+
 	#Until the user enters 'finish', asks for a year and displays a histogram using inc_by_year.
-	get_display()
+	get_display(tIncome)
 
 	#Then use the regionalGDP class to generate graphs for the years 2007-2012
 	for year in range(2007,2013):
 		try:
 			print "Generating graphs for the year", str(year), "..."
-			yearly_data = regionalGDP(year)
+			yearly_data = regionalGDP(tCountries, tIncome, year)
 			yearly_data.plot_hist()
 			yearly_data.plot_boxplot()
 		
@@ -41,7 +47,7 @@ def prompt():
 		sys.exit()
 
 
-def get_display():
+def get_display(income):
 
 	#Asks the user to enter a year. Also accepts Ctrl+C and Ctrl+D.
 	input = prompt()
@@ -54,10 +60,10 @@ def get_display():
 		#inc_by_year prints "Invalid input." if input is not in the year column of the income df. 
 		#Otherwise, displays a histogram. 
 		if input.isdigit():
-			inc_by_year(int(input))
+			inc_by_year(income, int(input))
 		else:
 			print "Invalid input."
-		return get_display()
+		return get_display(income)
 
 
 #Run the program

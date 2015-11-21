@@ -17,9 +17,9 @@ class InvalidDistributionRequest(Exception):
 class regionalGDP(object):
 	'''Each instance of this class is associated with a merged dataframe for the given year, grouped by region.'''
 
-	def __init__(self, year):
+	def __init__(self, countries, income, year):
 
-		tempdf = merge_by_year(year)
+		tempdf = merge_by_year(countries, income, year)
 
 		#tempdf will be None if 'year' is not a row in income df
 		if tempdf is not None:
@@ -39,7 +39,7 @@ class regionalGDP(object):
 	def plot_hist(self):
 
 		'''Plot histograms of the series and format nicely.'''
-		self.df['Income'].hist(by=self.df['Region'], xlabelsize=6, xrot = True, ylabelsize=8, bins=15)
+		self.df['Income'].hist(by=self.df['Region'], xlabelsize=6, xrot = True, ylabelsize=8, bins=20)
 		plt.suptitle('GDP Distribution in ' + str(self.year), fontsize=16)
 		plt.savefig("Income_by_Region_" + str(self.year) + "_Histogram.pdf")
 		

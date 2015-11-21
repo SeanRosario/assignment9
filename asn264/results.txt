@@ -1,0 +1,7 @@
+The distribution of wealth in Africa, South America, and Oceania seems to be unchanged, though all regions seem slightly more wealthy in 2012 than in 2007. 
+
+Asia became generally wealthier since the mean of the boxplot is greater in 2007 than in 2012. In addition, the value for the third quartile and the value of outliers also appears to have increased, suggesting that there are a few very high income nations making the average value higher, rather than an overall increase across all nations in Asia. 
+
+In Europe, the average income dropped significantly as did the number of higher outliers. The data suggests that the region is generally less wealthy in 2012 than it was in 2007. However, it seems that the tail of the distribution is still relatively long. 
+
+In North America, the distribution of income is similar except that there seem to be more wealthy countries, but those countries are generally less wealthy. It looks this way because, when comparing earlier and later histograms, some of the values in the earlier peaks seem to have shifted right, towards a wealthier distribution - but some of the wealthier values seem to have shifted left was well. In the boxplots, this is reflected by generally higher means in average years but smaller ranges. 

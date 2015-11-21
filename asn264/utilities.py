@@ -11,24 +11,23 @@ import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt 
 
-print "Loading data..."
+def load_session():
 
-countries = pd.read_csv('../countries.csv')
-income = pd.read_excel('../indicator gapminder gdp_per_capita_ppp.xlsx')
+	countries = pd.read_csv('../countries.csv')
+	income = pd.read_excel('../indicator gapminder gdp_per_capita_ppp.xlsx')
 
-#Years are column names. Transpose the dataset to have years as the rows.
-income = income.transpose()
+	#Years are column names. Transpose the dataset to have years as the rows.
+	income = income.transpose()
 
-#Make the countries the column names using loc for clarity .
-income.columns = income.loc['gdp pc test']
+	#Make the countries the column names using loc for clarity .
+	income.columns = income.loc['gdp pc test']
 
-#Remove the row with the country names and reindex. This means income.iloc[0] no longer exists. 
-income = income.iloc[1:]
+	#Remove the row with the country names and reindex. This means income.iloc[0] no longer exists. 
+	income = income.iloc[1:]
 
-print "Income DataFrame looks like:/n", income.head()
+	return [countries, income]
 
-
-def inc_by_year(year):
+def inc_by_year(income, year):
 	'''Graphically display the distribution of income per person across all countries in the world for a the given year using a bar graph.'''
 	
 	try:
@@ -39,7 +38,7 @@ def inc_by_year(year):
 		bin_size = (max(gdp_dist)-min(gdp_dist))/25
 
 		#Plot a histogram of the series and format it nicely. 
-		hist = gdp_dist.plot(kind = 'hist', bins=np.arange(min(gdp_dist), max(gdp_dist) + bin_size, bin_size), color='#483D8B', figsize = (25,6), align = 'left')
+		hist = gdp_dist.plot(kind = 'hist', fontsize = 9, bins=np.arange(min(gdp_dist), max(gdp_dist) + bin_size, bin_size), color='#483D8B', figsize = (25,6), align = 'left')
 		plt.xticks(np.arange(min(gdp_dist), max(gdp_dist), bin_size))
 		plt.axis('tight')
 		plt.title('GDP Distribution in ' + str(year))
@@ -51,7 +50,7 @@ def inc_by_year(year):
 		print "Invalid input."
 
 	
-def merge_by_year(year):
+def merge_by_year(countries, income, year):
 	'''Merge the countries and income datasets for any given year. Result is a dataframe with three columns: country, region, income.'''
 	
 	try:
@@ -68,6 +67,9 @@ def merge_by_year(year):
 	#Occurs if 'year' is not a row in income df. 
 	except KeyError:
 		return None
+
+
+
 
 
 
