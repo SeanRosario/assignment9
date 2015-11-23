@@ -1,0 +1,8 @@
+Name: Ben Jakubowski (buj201)
+Date: 11/18/15
+
+Results:
+
+Looking at the median income distribution histograms for 2007-2012, what is most striking are regional differences in the country-level distribution. In general, it is apparent that median per capita income in the global north far exceeds income in the global south. To see this, note the histograms for Aftrica, Asia, Ocean, and South America all have modes on the far left of the distribution (lowest median per capita income) for all years, while in Europe and North America the mode is shifted to the right (i.e. higher median income levels).
+
+Comparing across time, the most significant observation is the lack of change in the median income distribution either globally or regionally. While there are some marginal shifts in the distributions, they are all relatively invariant with time. This suggests that median incomes were relatively stagnant during this six-year period. In light of the fact that this time period coincided with (i) a major global recession followed by (ii) the initial economic recovery, it is apparent any economic gains in the early 2010s did not translate to median income growth at the country level.
