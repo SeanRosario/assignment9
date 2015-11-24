@@ -21,3 +21,13 @@ class data_explorer_test_case(unittest.TestCase):
         hist_fig, box_fig = de.plot()
         hist_fig.show()
         box_fig.show()
+
+    def test_hist(self):
+        data = self.idc.merge_by_year(2000)
+        de = DataExplorer(data, year=2000, by="Region")
+        de.income_histogram()
+
+    def test_hist_noby(self):
+        data = self.idc.merge_by_year(2000)
+        de = DataExplorer(data, year=2000, by=None)
+        de.income_histogram()

@@ -56,6 +56,9 @@ def main():
         except KeyError as e: # Year entered is valid, but not in the income data
             print "Year %d is not in data. Please try another year." % e.message
             continue
+        except KeyboardInterrupt:
+            print "Quitting!"
+            exit()
 
     # Now that user has finished, and we've broken out of the loop,
     # generate graphs for the years 2007-2012
