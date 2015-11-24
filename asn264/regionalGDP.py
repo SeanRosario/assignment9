@@ -36,6 +36,7 @@ class regionalGDP(object):
 		else:
 			raise InvalidDistributionRequest
 	
+	
 	def plot_hist(self):
 
 		'''Plot histograms of the series and format nicely.'''

@@ -3,7 +3,7 @@ Author: Aditi Nair
 Date: November 15 2015
 
 Description: This file is responsible for setting up the countries and income dataframes as required in Problems 1-3.
-It also contains the required functions inc_by_year and merge_by_year as required in Problems 4 and 5. 
+It also contains the required functions income_by_year and merge_by_year as required in Problems 4 and 5. 
 '''
 
 
@@ -27,7 +27,8 @@ def load_session():
 
 	return [countries, income]
 
-def inc_by_year(income, year):
+
+def income_by_year(income, year):
 	'''Graphically display the distribution of income per person across all countries in the world for a the given year using a bar graph.'''
 	
 	try:
@@ -37,7 +38,7 @@ def inc_by_year(income, year):
 		#Want 20 ticks for clarity but not too cluttered. 
 		bin_size = (max(gdp_dist)-min(gdp_dist))/25
 
-		#Plot a histogram of the series and format it nicely. 
+		#Plot a histogram of the series and format it nicely. 3
 		hist = gdp_dist.plot(kind = 'hist', fontsize = 9, bins=np.arange(min(gdp_dist), max(gdp_dist) + bin_size, bin_size), color='#483D8B', figsize = (25,6), align = 'left')
 		plt.xticks(np.arange(min(gdp_dist), max(gdp_dist), bin_size))
 		plt.axis('tight')
@@ -45,11 +46,12 @@ def inc_by_year(income, year):
 		plt.xlabel('GDP per Person')
 		plt.ylabel('Number of Countries')
 		plt.show()
+		return True
 
 	except KeyError:
 		print "Invalid input."
+		return False
 
-	
 def merge_by_year(countries, income, year):
 	'''Merge the countries and income datasets for any given year. Result is a dataframe with three columns: country, region, income.'''
 	
@@ -67,7 +69,6 @@ def merge_by_year(countries, income, year):
 	#Occurs if 'year' is not a row in income df. 
 	except KeyError:
 		return None
-
 
 
 
