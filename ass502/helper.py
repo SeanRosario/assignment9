@@ -10,8 +10,8 @@ def load_data():
 	"""function that loads and processes the data into dataframes"""
 
 	#load data
-	countries = pd.read_csv("countries.csv")
-	income = pd.read_excel("indicator gapminder gdp_per_capita_ppp.xlsx")
+	countries = pd.read_csv("../countries.csv")
+	income = pd.read_excel("../indicator gapminder gdp_per_capita_ppp.xlsx")
 
 	#change index to country name
 	income.set_index('gdp pc test',inplace=True)
