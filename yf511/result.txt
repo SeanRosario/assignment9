@@ -1,0 +1,3 @@
+By the histogram plot, Asia and Africa both has increasing GDP. Some countries with a high income but most of them has a relatively low income
+
+From the box plot, Asia and South America has an increasing mean GDP. Europe has a decreasing trend but higher GDP
