@@ -44,12 +44,14 @@ class DataExplorer(object):
         '''Create boxplot by by_var and return result'''
         # BOXPLOT
         self.data.boxplot(by=self.by_var, showmeans=True)
+        plt.title("Income distributions, %s" % self.year)
         box_fig = plt.gcf()
         # Clean labels
         locs, labels = plt.xticks()
         # Convert labels to title case, split on space, join on newline
         clean_labels = ["\n".join(lab.get_text().title().split(" ")) for lab in labels]
         plt.xticks(locs, clean_labels)
+        plt.yticks(10000*np.arange(1, 11))
         return box_fig
 
     def plot(self):

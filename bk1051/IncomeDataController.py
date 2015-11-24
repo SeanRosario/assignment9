@@ -39,19 +39,6 @@ class IncomeDataController(object):
 
     def plot_income(self, year):
         '''Plot a historgram of the income distributions for a given year'''
-
-        # fig, ax = plt.subplots()
-        #
-        # xticks = np.arange(2, 5.5, 0.25)
-        # xtick_labels = (10**xticks).astype('int')
-        #
-        # np.log10(self.income[year]).hist(ax=ax, bins=xticks)
-        # plt.title("Distribution of Countries' GDP per Capita, %s" % year)
-        # plt.xlabel("Income (Log Scale)")
-        # plt.subplots_adjust(bottom=0.15)
-        # plt.xticks(xticks, xtick_labels, rotation=90)
-        # plt.yticks(np.arange(0, 55, 5))
-        # plt.show()
         df = pd.DataFrame(self.income[year])
         df.columns=["Income"]
         explorer = de.DataExplorer(df, by=None, year=year)

@@ -35,9 +35,8 @@ def ask_for_year():
 
 def main():
     '''The main function'''
-
+    # Get current directory of python code, and load data from same directory
     directory, filename = os.path.split(os.path.realpath(__file__))
-    print "Current directory", directory
     idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
                 os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
 
@@ -57,20 +56,17 @@ def main():
             print "Year %d is not in data. Please try another year." % e.message
             continue
         except KeyboardInterrupt:
-            print "Quitting!"
+            print "\n\nQuitting!\n"
             exit()
 
     # Now that user has finished, and we've broken out of the loop,
     # generate graphs for the years 2007-2012
     years = range(2007, 2013)
+    print "Outputting plots for %s" % years
     idc.plot_years(years)
-
+    print "Done plotting"
     return idc
 
 
 if __name__ == '__main__':
-    try:
-        main()
-    except KeyboardInterrupt:
-        print "Quitting..."
-        exit()
+    main()
