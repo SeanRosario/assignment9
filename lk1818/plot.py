@@ -1,0 +1,40 @@
+'''
+This module is for plotting the distribution of income per person across all countries.
+'''
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+from data import *
+
+def plot_inc_by_countries(income, year):
+    '''
+    Provide a function to graphically display the distribution of income per person across all countries in the world for the given year. I choose to use a histogram to display the distribution.
+    '''
+    values = income.ix[year].dropna() #drop the NANs
+    num_bin = 40 #set the number of bins
+    plt.close()
+    hist = values.hist(bins=num_bin) 
+    plt.title('GDP Distribution: Year ' + str(year))
+    plt.ylabel('Number of Countries')
+    plt.xlabel('GPD per Person')
+    plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
