@@ -62,3 +62,4 @@ target/
 launch_jupyter_notebook.command
 
 ~$indicator gapminder gdp_per_capita_ppp.xlsx
+output/
