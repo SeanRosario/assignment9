@@ -5,19 +5,24 @@ import matplotlib.pyplot as plt
 class DataExplorer(object):
     '''Manage exploratory data analysis'''
 
-    def __init__(self, dataframe, year=None, by="Region"):
-        '''Constructor. Sets the object's year (for titles) and data'''
+    def __init__(self, dataframe, year=None, by="Region", column="Income"):
+        '''Constructor. Sets the object's year (for titles) and data.
+        The by variable is optional; setting to None will mean no subplots.
+
+        '''
         self.year = year
         self.data = dataframe
         self.by_var = by
-        self.data['logged_income'] = np.log10(self.data["Income"])
+        self.logged_data = self.data.copy()
+        self.plotcol = column
+        self.logged_data[self.plotcol] = np.log10(self.logged_data[self.plotcol])
 
     def income_histogram(self):
         '''Construct an array of histograms of income'''
         xticks = np.arange(2, 5.5, 0.25)
         xtick_labels = (10**xticks).astype('int')
 
-        subplots = self.data.hist(column="logged_income", by=self.by_var, sharex=True, figsize=(10, 8),
+        subplots = self.logged_data.hist(column=self.plotcol, by=self.by_var, sharex=True, figsize=(10, 8),
                                     bins=xticks)
 
         fig = plt.gcf()
