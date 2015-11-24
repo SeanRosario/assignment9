@@ -1,0 +1,10 @@
+DSGA 1007 Assignment9
+
+#9
+
+The income per capita summary plots observed includes the following years： 1800, 1850, 1900, 1950, 1970, 1980, 1990 and 2000.
+
+The overall income per capita keeps increasing. Number of countries with lower income per capita decreased over years.
+
+However, the maximum of income per capita did not increase consistently.
+
