@@ -23,12 +23,12 @@ def display_distribution(year, dataframe):
 			raise invalid_year()
 		else:
 			year_distribution = dataframe.ix[int(year),:]   #select the data in the given year
-			plt.figure(figsize = (10, 10))
-			year_distribution.dropna().order().plot(kind = 'barh')   #drop the nan value and sort by the value
+			plt.figure(figsize = (8, 8))
+			year_distribution.dropna().hist()   #drop the nan value and sort by the value
 			plt.xlabel('Income per person')
-			plt.ylabel('Countries')
-			plt.yticks(fontsize = 4)
-			plt.title('Income distribution of per person over countries in ' + str(year))
+			plt.ylabel('Frequency')
+			plt.yticks(fontsize = 10)
+			plt.title('Income distribution of per person in ' + str(year))
 			plt.show()
 	else:
 		raise invalid_input()
