@@ -2,6 +2,7 @@
 This part generates the results, it launches an small interfase where the user has to write what to do, whenever a result
 is launched, it returns to the main window.
 Exception handling and input validation is done for each part.
+The input databases have to be in the same path
 """
 import InitialCharge as IC
 import  DescriptiveAnalysisTool as DAT
