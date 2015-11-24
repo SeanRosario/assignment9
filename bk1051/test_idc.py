@@ -5,11 +5,13 @@ from IncomeDataController import *
 class idc_test_case(unittest.TestCase):
 
     def test_idc_create_ok(self):
+        '''Test creating an IDC'''
         directory, filename = os.path.split(os.path.realpath(__file__))
         idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
                 os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
 
     def test_idc_bad_files_raise_exceptions(self):
+        '''Bad files should raise exceptions'''
         directory, filename = os.path.split(os.path.realpath(__file__))
         # Bad countries file
         with self.assertRaises(DataImportError):
@@ -27,6 +29,7 @@ class idc_test_case(unittest.TestCase):
                     os.path.join(directory, "indicatorgapminder gdp_per_capita_ppp.xlsx"))
 
     def test_plot_income(self):
+        '''Plot some incomes for years'''
         directory, filename = os.path.split(os.path.realpath(__file__))
         idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
                 os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
