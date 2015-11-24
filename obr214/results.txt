@@ -1,0 +1,11 @@
+Making an examination of the Medians in the boxplots, we see that:
+- For Asia, there is a constant growth between 2007 and 2012.
+- For Europe, we can observe that the median decreases in the year 2009, but again starts to grow in 2010.
+- For Africa, as the region in Asia, it presents a constant growth in the period.
+- For North America, occurs the same as in Europe, there is a decrease in 2009, but grows again in 2010.
+- For South America, the region presents no decrease in any year.
+- For Oceania, it presents a constant decrease in the years 2009, 2010 and 2011, starting to grow again in 2012.
+
+We can make an assumption of the relationship between the North America and Europe. Both presented the the same decrease
+in the same year. This could be seen as the tight bounds in their economy.
+For the other regions, with exception of Oceania, we can see that there is a constant growth through the years.
