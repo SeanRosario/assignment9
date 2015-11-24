@@ -9,10 +9,12 @@ class data_visulization():
 		self.distribution = merged_distribution
 
 	def data_histograms(self):
+		label_list = self.distribution['Region'].unique().tolist()
+		list_by_region = []
+		for region in label_list:
+			list_by_region.append(self.distribution[self.distribution['Region'] == region].Income)
 		plt.figure()
-		for region in self.distribution['Region'].unique():   #generate histograms of different region in a figure.
-			region_distribution_dist = self.distribution[self.distribution['Region'] == region]
-			plt.hist(region_distribution_dist['Income'].tolist(), label = region, stacked = False)
+		plt.hist(list_by_region, stacked = True, label = label_list)
 		plt.legend(loc = 'upper right')
 		plt.title(self.year)
 		plt.savefig('histograms_{}.png'.format(str(self.year)))
