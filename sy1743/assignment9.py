@@ -18,7 +18,7 @@ Thrid, user can enter 'quit' tp exit this program.
 
 def main():
 # Q7
-	print  import_and_transform('../indicator gapminder gdp_per_capita_ppp.xlsx')
+	import_and_transform('../indicator gapminder gdp_per_capita_ppp.xlsx')
 	try:
 		while True:
 			print '\n You have three options'
