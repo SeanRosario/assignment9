@@ -1,0 +1,7 @@
+From the histograms I observed that from 2007 to 2012, there is an increase of gdp or there is an increase of people
+with higher income. Changes are relatively small in Asia, while in Europe and South America and there are more obvious
+changes.
+
+I observed from the boxplots that gdp in Europe is higher than other continents with greater range. In Asia, range in
+income is big but average is relatively low, which might suggest a big income gap in Asia.
+
