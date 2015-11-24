@@ -1,0 +1,3 @@
+1. According to the histograms, which show the distribution of the income per person by region data set from 2007 to 2012, the distribution of the income per person tends to shift to right for all regions. This means that for some countries, especially poor(developing) countries, the number of people having higher income is increasing over the period.
+
+2. However, when looking at the boxplots from 2007 to 2012, we can see that the boxplots do not change much over the period. This means that, although the number of people having higher income is increasing in all regions over the period, this increase is not large enough to dramatically change the distribution per region. 
