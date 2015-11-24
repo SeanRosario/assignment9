@@ -15,4 +15,6 @@ class data_explorer_test_case(unittest.TestCase):
     def test_plots(self):
         data = self.idc.merge_by_year(2000)
         de = DataExplorer(data)
-        de.plot()
+        hist_fig, box_fig = de.plot()
+        hist_fig.show()
+        box_fig.show()

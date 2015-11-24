@@ -51,10 +51,12 @@ def main():
         except KeyError as e: # Year entered is valid, but not in the income data
             print "Year %d is not in data. Please try another year." % e.message
             continue
-    # Load data
-    # handle input
-    # explore
-    idc.plot_income(2000)
+
+    # Now that user has finished, and we've broken out of the loop,
+    # generate graphs for the years 2007-2012
+    years = range(2007, 2013)
+    idc.plot_years(years)
+    
     return idc
 
 
