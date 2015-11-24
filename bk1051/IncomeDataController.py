@@ -47,8 +47,7 @@ class IncomeDataController(object):
         np.log10(self.income[year]).hist(ax=ax, bins=xticks)
         plt.title("Distribution of Countries' GDP per Capita, %s" % year)
         plt.xlabel("Income (Log Scale)")
-        #xtick_labels = [100, 500, 1000, 5000, 7500, 10000, 25000, 50000, 75000, 100000]
-
+        plt.subplots_adjust(bottom=0.15)
         plt.xticks(xticks, xtick_labels, rotation=90)
         #plt.xticks(np.log10(xtick_labels), xtick_labels)
         plt.yticks(np.arange(0, 55, 5))

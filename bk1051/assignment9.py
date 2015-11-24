@@ -8,6 +8,7 @@
 import pandas as pd
 import numpy as np
 from IncomeDataController import IncomeDataController
+import os
 
 #countries = pd.read_csv('countries.csv')
 #income = pd.read_excel("indicator gapminder gdp_per_capita_ppp.xlsx", index_col=0).T
@@ -34,7 +35,11 @@ def ask_for_year():
 
 def main():
     '''The main function'''
-    idc = IncomeDataController('countries.csv', "indicator gapminder gdp_per_capita_ppp.xlsx")
+
+    directory, filename = os.path.split(os.path.realpath(__file__))
+    print "Current directory", directory
+    idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
+                os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
 
     # Main program loop
     while True:
@@ -56,7 +61,7 @@ def main():
     # generate graphs for the years 2007-2012
     years = range(2007, 2013)
     idc.plot_years(years)
-    
+
     return idc
 
 

@@ -6,11 +6,14 @@ import matplotlib
 
 from IncomeDataController import *
 from DataExplorer import *
+import os
 
 class data_explorer_test_case(unittest.TestCase):
 
     def setUp(self):
-        self.idc = IncomeDataController('countries.csv', "indicator gapminder gdp_per_capita_ppp.xlsx")
+        directory, filename = os.path.split(os.path.realpath(__file__))
+        self.idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
+                os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
 
     def test_plots(self):
         data = self.idc.merge_by_year(2000)

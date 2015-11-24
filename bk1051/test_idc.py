@@ -10,23 +10,31 @@ from IncomeDataController import *
 class idc_test_case(unittest.TestCase):
 
     def test_idc_create_ok(self):
-        idc = IncomeDataController('countries.csv', "indicator gapminder gdp_per_capita_ppp.xlsx")
+        directory, filename = os.path.split(os.path.realpath(__file__))
+        idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
+                os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
 
     def test_idc_bad_files_raise_exceptions(self):
+        directory, filename = os.path.split(os.path.realpath(__file__))
         # Bad countries file
         with self.assertRaises(DataImportError):
-            idc = IncomeDataController("indicator gapminder gdp_per_capita_ppp.xlsx", "indicator gapminder gdp_per_capita_ppp.xlsx")
+            self.idc = IncomeDataController(os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"),
+                    os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
 
         # Bad income file
         with self.assertRaises(DataImportError):
-            idc = IncomeDataController('countries.csv', 'countries.csv')
+            idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
+                                os.path.join(directory, 'countries.csv'))
 
         # Bad file name
         with self.assertRaises(DataImportError):
-            idc = IncomeDataController('countries.csv', "indicatorgapminder gdp_per_capita_ppp.xlsx")
+            idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
+                    os.path.join(directory, "indicatorgapminder gdp_per_capita_ppp.xlsx"))
 
     def test_plot_income(self):
-        idc = IncomeDataController('countries.csv', "indicator gapminder gdp_per_capita_ppp.xlsx")
+        directory, filename = os.path.split(os.path.realpath(__file__))
+        idc = IncomeDataController(os.path.join(directory, 'countries.csv'),
+                os.path.join(directory, "indicator gapminder gdp_per_capita_ppp.xlsx"))
         idc.plot_income(2000)
         idc.plot_income(1990)
 
