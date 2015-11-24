@@ -1,0 +1,8 @@
+From the histograms between 2007 to 2009 we see the per capita income shrink on the higher and middle end (the middle area beging to bolster).
+Then the wealthiest appear to get wealthier until 2011. In 2012 it appears we may have less populated country per capita income overall as most 
+categories either remain the same as they were in 2011 or shrink.
+
+In the region boxplots, the only real change between 2007 and 2008 occurs in Oceania where the top 25% increase per capita income noticably.
+Between 2008 and 2009 there is no noticable change. Consistently from 2009 onward we see Asian countries increasing per capita income slightly more than the other regions.
+The only other really noticable trend is between 2011 and 2012 in Oceana where the top 50% countries appear to collapse towards the mean per capita income. This, combined with our 
+idea from the histograms (that we may have less populated data in 2012) could mean that perhaps the wealthier per capita nations in Oceania are not available for 2012 in our data.
