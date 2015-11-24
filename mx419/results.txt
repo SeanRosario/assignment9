@@ -1,0 +1,11 @@
+#author: Muhe Xie
+#netID: mx419
+#date: 11/16/2015
+
+Answer:
+1 Generally, during 2007-2012, the overall income distribution of all regions does not change much. But changes can be found in different regions.
+2 The income of Asia has increased during that period. That can be seen from the hist plot. The number of countries in Asia  with income above 20000 
+  has increased. It can also be proved in boxplots. Also, the income of the richest countries in Asia has increased according to the hist plot.
+3 The income distribution in Europe is most even and has increased slightly during these years. The income difference between European countries has decreased.
+4 The income of African countries has clustered in the low level. The income has increased slightly because during the period the number of countries with income 
+  over 10000 has increased.
