@@ -28,25 +28,25 @@ class all_tests(TestCase):
 
     def test_load_indicators_IO(self):
         with self.assertRaises(IOError):
-            loaderandmerger.load_indicators('sdjasd.csv', 'countrieeees.xls')
+            loaderandmerger.loader_merger_histogram.load_data('sdjasd.csv', 'countrieeees.xls')
 
     def test_load_indicators_TypeE(self):
         with self.assertRaises(TypeError):
-            loaderandmerger.load_indicators('countries.csv')
+            loaderandmerger.loader_merger_histogram.load_data('countries.csv')
 
 
     def test_income_distribution_hist_invalid_year(self):
         with self.assertRaises(loader_Error):
-            loaderandmerger.income_distribution_hist(1799)
+            loaderandmerger.loader_merger_histogram.income_distribution_hist(1799)
 
     def test_income_distribution_hist_string(self):
         with self.assertRaises(loader_Error):
-            loaderandmerger.income_distribution_hist('1799')
+            loaderandmerger.loader_merger_histogram.income_distribution_hist('1799')
 
 
     def test_merge_by_year(self):
         with self.assertRaises(loader_Error):
-            loaderandmerger.merge_by_year(1799)
+            loaderandmerger.loader_merger_histogram.merge_by_year(1799)
     def test_merge_by_year(self):
         with self.assertRaises(loader_Error):
-            loaderandmerger.merge_by_year('1799')
+            loaderandmerger.loader_merger_histogram.merge_by_year('1799')
