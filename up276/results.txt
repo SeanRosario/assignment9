@@ -1,0 +1,10 @@
+After examining the plots generated we can say below things.
+
+1. For Europe we can see the median increment from 2007 to 2012. In 2007 we can see the outliers present but in 2012 there are no outliers present. At the same time extreme value increases from around 4500 to 7000 and variance decreases ( data becomes more concentrated towards the median)
+2. For Asia we can observe too little  growth from 2007 to 2012. and in 2012 we can see one outlier present in the data. We can see the opposite of the Europe for the extreme values decreases from around 7000 to 4500. Variance decreases with from 2007 to 2012.
+3. For Africa we can see very little growth near to zero. At the same time we can't observe any big changes with the data distribution.
+4. For North America we can observe the constant growth as we move from 2007 to 2012. We can observe the increment in median value from 2007 to 2012.
+5. For Oceania we don't observe any big changes with respect to median value of the GDP distribution.
+6. For South America we observe very small increment for Median and 75th quartile and extreme values.
+
+In conclusion, we can observe the increment of some level and other distribution changes in the income distribution for all countries except Oceania.
