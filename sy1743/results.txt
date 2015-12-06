@@ -1,0 +1,11 @@
+# DS-GA 1007 HW9
+# Author: Sida Ye
+# Q9
+
+I observed the period from 1950 to 2010 with a 10-year intervel. There are several changes.
+
+The first one is that the income distribution tends to shift to right, which implies that the number of people have higher income is increasing during this period.
+
+Second, the maximum income increases from  80,000 to 90,000. But it does not increase monotonically. At first, it drops to 60,000 and then it grows to 90,000.
+
+Third, the number of people with lower income(below 10,000) decreases from 1950 to 2010. The change has similar pattern as the change of maximum income, but in a inverse way. It increases at first, then it drops to a lower level.
