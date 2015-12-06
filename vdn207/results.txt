@@ -1,0 +1,36 @@
+Visual inspection of the graphs
+-------------------------------
+
+Africa
+------
+
+The income per person has been the highest in Seychelles during the five year period. It has not been consistent over the 5 years.
+There are ups and downs during the years and has been the highest in 2009.
+
+Asia
+----
+
+The income per person has been the highest in Qatar during the five year period. There is not much decrease between 2007-2011 and has been relatively stable. But, in 2012, most countries income per person increases. We can observe the huge gap between the countries in Asia over this 5 year period.
+
+Europe
+------
+
+The income per person has been the highest in Liechtenstein during the five year period. But, we can observe that compared to Africa and Asia, most countries are in a better situation. The interesting observation here is that the income per person of the countries have decreased over the 5 year period. 
+
+North America
+-------------
+
+The income per person has been the highest in US during the five year period. There has been slight variation in the value over the 5 year period, often decreasing and often increasing. But, clearly US and Canada are the countries with the largest value over the 5 year period.
+
+Oceania
+-------
+
+The income per person has been the highest in Australia during the five year period. There has been slight imporvement till 2011. But, in 2012, there has been a sharp fall in Australia's value and other Oceania countries also.
+
+South America
+-------------
+
+The income per person has been the highest in Chile during the five year period. The income per person has increased over the 5 years and there seems to be less gap between the countries in South America.
+
+
+Overall, Qatar has the higest income per person during the entire 5 year period.
