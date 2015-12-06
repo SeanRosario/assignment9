@@ -1,0 +1,3 @@
+Plotting the histogram for several years it could be notice that the income increases over the decades almost for any country.
+From the boxPlot it can be noticed that the median of the Africa region is considerably lower of any other region.
+It can also be noticed that in the last few years Asia is growing faster of the other regions.
