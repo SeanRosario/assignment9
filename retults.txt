@@ -1,0 +1,5 @@
+short description of the graphs:
+
+1. It seems that there were no significant changes for the period. However, there were some changes. For Asia, the maximum was steadily increasing. For Oceania, the maximum was also increasing, but in 2012 it decreased dramatically. The median of Europe was decreasing while the maximum almost kept unchanged. The maximum of North America was decreasing.
+
+2. From the boxplot, we can see that Asia appeared since 2009 in the distribution of over 75000 and kept increasing. Also for other distributions, Asia showed an significant increasing trend. The highest data of Aisa and Europe kept increasing while in 2012 the highest data of Europe decreased a lot. 
