@@ -1,0 +1,46 @@
+'''
+This module contains the interaction with user. It prompts the user for an input of a year.
+'''
+
+import sys
+from plot import *
+import matplotlib.pyplot as plt
+
+
+def get_year(income):
+    plt.close()
+    while True: 
+        try:
+            year_input = raw_input('Please enter a year between 1800 and 2012. (Enter "quit" to exit the system; enter "finish" to skip this part and save graphs of individual income by region from 2007 to 2012.)\n') 
+
+        except (KeyboardInterrupt, EOFError): 
+            sys.exit()
+    
+        if (year_input == 'quit' or year_input == 'Quit' or year_input == 'q' or year_input == 'QUIT' or year_input == 'Q'): 
+            sys.exit() #these are the keys of quitting the prompting session
+
+        elif (year_input == 'finish' or year_input == 'Finish' or year_input == 'f' or year_input == 'FINISH' or year_input == 'F'):
+            break
+
+        else:
+            try:
+                num_year = int(year_input) #make sure the input is an integer - otherwise throws an error message and keep prompting
+
+            except InvalidInputTypeException():
+                return get_year(income)
+
+
+            else:
+                try: 
+                    income.ix[year_input] #make sure the input year is within our data set (1800-2012) - otherwise throws an error message and keep prompting
+                except (ValueError, TypeError, KeyError):
+                    print ('Year out of range - please select a year between 1800 and 2012.') 
+                    return get_year(income)
+
+                plot_inc_by_countries(income, year_input) 
+                return get_year(income)  #generates a graph of income distribution across all countries in the year as requested by the user.
+
+
+class InvalidInputTypeException(Exception):
+    def __str__(self):
+        return 'Invalid input - please input an integer. '
