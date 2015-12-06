@@ -1,0 +1,7 @@
+Overall there is not a large variation between the GDP for each country over the five years.
+The poorer countries (Africa, Oceania and South America) have decreasing GDP between
+2007 and 2012. Oceania has the greatest decrease in GDP between 2011 and 2012.
+From the stacked histogram we can see that in the in the poorer countries, the 
+income per person becomes a bit more uniform across the income levels. We see less people
+making under $10,000 per year between 2007 and 2010. We cannot necessarily see that
+in the box plots.
