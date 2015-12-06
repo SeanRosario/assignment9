@@ -1,0 +1,4 @@
+Answer to Question 9:
+
+For both boxplots and histograms, they don't change a lot from 2007 to 2012 for each region.
+However, when look carefully into the plots, Asia has the rapidest increase in income. Distributions of income in Africa and South America are skewed to a lower average than the other continents. Europe and North America have more even distribution than other continents. An interesting phenomenon shown in the histogram is that Asia has most income level below 50000, yet the highest income level also happens in Asia, but not Europe or North America.  

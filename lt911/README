@@ -1,0 +1,7 @@
+1) The program can be run by typing:
+python assignment9.py
+
+2) Test can be run by typing:
+python -m unittest Input_Test
+
+3) Answers to problem 9 can be found in results.txt
