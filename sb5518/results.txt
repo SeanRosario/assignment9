@@ -1,0 +1,7 @@
+By analyzing the income per capita distribution across regions for the 2007-2012 period, some interesting patterns arise:
+
+- The median income per capita in Europe and North America is considerably higher than the rest of the regions.
+- The median income for South America and Africa seem to have slightly improved for this period.
+- The limits of NA seem to be stable, but a higher mode suggests that there have been a certain redistribution of income.
+
+
