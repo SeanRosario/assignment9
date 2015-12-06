@@ -1,0 +1,4 @@
+
+By looking at the boxplots from 2007-2012 it seems that there are not big changes over time, except for the reduction of the variance of the GDP in Oceania between 2011 and 2012. 
+
+Looking at the histograms, the biggest impact can be observed that Asian countries are moving to higher GDP positions.
