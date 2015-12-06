@@ -1,0 +1,10 @@
+Question 9:
+
+One fact calling attention is that there are more countries per region having lower values
+for per person income given a year. This distribution of countries change just a little
+each year. Another is that over the years up to 2008/09 some countries
+had an increase on those values of per person income. This probably reflects the crisis which 
+occurred in 2007 causing a decrease on per person income and the process of overcoming that initial 
+period of recession. However, after 2008/09, it is possible to observe a new tendency on those
+values because the distribution of countries having lower values increases again, probably
+signaling a second recession.
