@@ -1,0 +1,12 @@
+#DS-GA-1007 HW9 Q9
+jz2327
+
+Visually inspect the graphs generated in question 8 and write a short description of the changes you observe over the period. Place your description in a file called results.txt​and add this to the repository.
+
+Answers here:
+1. In general, the distribution did not change a lot during the period of year 2007 to 2012. Africa stays the lowest income during the period while European seems to be the most rich area.
+
+2. For year 2007-2011 the highest per person income comes from Europe but when in 2012 the highest per person income comes from Asian.
+
+3. Asia gradually become richer during the priod since the distribution tend to move from left to right and there appears some area in Asia with the highest income.
+
