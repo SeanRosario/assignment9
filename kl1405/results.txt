@@ -1,0 +1,5 @@
+According to the boxplots, I find that Africa, Europe, south America and North America have very few change over the 5 years.Overall, Europe has the highest income per person on average and Africa has the lowest.Asia has noticeable increase in come per person.
+
+According to the stacked histograms, I find that overall there is very few change over the 5 years.
+Europe is widely spread out between smaller than 20000 and over 70000 while having the majority at 30000-40000.For Asia and Africa, a large number of low incomes shifted up a little.
+For the remaining regions, the change is not noticeable.
