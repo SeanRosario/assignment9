@@ -1,0 +1,3 @@
+Visually inspecting the bloxplots from the years 2007-2012 suggest that the average GDP by region stays relatively stable over time.  The average GDP in Asia increases over time.  The spread in GDP in North America decreases over time.  
+
+The stacked histograms show that one Asia country has quickly increasing GDP over time.  Additionally, the number of countries in the smallest bin for GDP increases over time.  
