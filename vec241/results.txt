@@ -1,0 +1,4 @@
+We can observe the following :
+- For Europe and North America, the median income increases overall expcept in 2009 where it decreases
+- For Oceania, we can observe a decrease between 2009 and 2011
+- For the rest (Asia, Africa and south America), it is increasing every year
