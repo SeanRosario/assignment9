@@ -1,0 +1,6 @@
+Overall, Europe has the greatest GDP from 2007-2012 and greastest variabiltiy in GDP
+compared to any other region. Oceania and South regions tend have less variability in terms of GDP and remaind
+realitvely stable in GDP growth from 2007-2012. This suggests that these countries are generally equal in terms of income distribution. In Asia, the GDP is very different
+depending on the country, indicating extreme disparities between countries' wealth. From 2007-2012, 
+the mean GDP increased in Africa, Asia, South America, and Oceania. However, the GDP decreased 
+sligthy in North America and decreased signtificantly in Europe. 
